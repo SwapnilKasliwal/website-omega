@@ -1,0 +1,418 @@
+* {
+list-style-type: none;
+text-decoration: none;
+list-style: none;
+font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:  #8E8E8E;
+}
+#navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin-top: 0px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 75px;
+    z-index: 100;
+}
+
+#navbar .container{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: min-content;
+    white-space: nowrap;
+    cursor: pointer;
+}
+#company-logo{
+    width: 37px;
+}
+#company-name{
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    color: white;
+}
+#navbar ul{
+    float: right;
+}
+#navbar ul li{
+    display: inline-block;
+    margin: 7px 5px;
+    padding-top: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#navbar ul li a{
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: white;
+}
+#navbar ul li a:hover{
+    background-color: grey;
+}
+#check{
+    display: none;
+}
+.checkBtn{
+    float:right;
+    font-size: 30px;
+    color: white;
+    margin: 20px 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.carousel{
+    position: relative;
+    margin: auto;
+    margin-top: 75px;
+    width: 100%;
+    height: 85vh;
+}
+.carousel-container{
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-item img{
+    display: inline-block;
+    width: 100vw;
+    height: 85vh;
+}
+#main-carousel-prev{
+    position: absolute;
+    top:0;
+    left: 10px;
+    bottom: 0px;
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    width: 100px;
+    font-size: 50px;
+    cursor: pointer;
+}
+#main-carousel-next{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 10px;
+    background: rgba(128, 128, 128, 0);
+    border: none;
+    width: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.carousel-tracker{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    border-radius: 5px;
+}
+.carousel-tracker-item{
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px black solid;
+}
+.product-carousel, .gallery-carousel{
+    background-color:  #fefde4;
+    margin: 0 10vw 0 10vw;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    position: relative;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding-bottom: 20px;
+    border: 2px #fffed3 solid;
+    box-shadow: 4px 4px #fefdc0;
+}
+#products-heading, #gallery-heading{
+    font-size:35px;
+    margin: 0px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.product-carousel-container, .gallery-carousel-container{
+    display: flex;
+    overflow-x: hidden; 
+    margin-bottom: 30px; 
+}
+.product-carousel-item, .gallery-carousel-item{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px grey solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
+    margin: 10px
+}
+.product-carousel-item{
+    width: 300px;
+    height: 300px;
+}
+.gallery-carousel-item{
+    height: 300px;
+    width: auto;
+}
+.product-carousel-item img{
+    width: 296px;
+    height: 250px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.gallery-carousel-item img{
+    width: auto;
+    height: 300px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.product-carousel-item p{
+   font-weight: bold;
+}
+#product-carousel-prev, #gallery-carousel-prev{
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    width:100px;
+    top: 0px;
+    left: 20px;
+    bottom: 0px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#product-carousel-next, #gallery-carousel-next{
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0);
+    border: none;
+    width: 100px;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    font-size: 50px;
+    cursor: pointer;
+}
+.show-more{
+    font-size: 25px; 
+    text-decoration: underline ;
+    font-weight: bold;
+}
+.product-carousel-tracker, .gallery-carousel-tracker{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 90%;
+    bottom: 20%;
+    border-radius: 5px;
+}
+.product-carousel-tracker-item, .gallery-carousel-tracker-item{
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px black solid;
+}
+.tracker-active{
+    background-color: black;
+}
+#director-message{
+    height: fit-content;
+    background-color:  #fefde4;
+    margin: 10px 10vw 10px 10vw;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 2px #fffed3 solid;
+    box-shadow: 4px 4px #fefdc0;
+}
+#director-message-heading{
+    font-size:30px;
+    margin: 0px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#director-image{
+    border: 1px solid;
+    border-radius: 1px;
+    box-shadow: 1px 1px black;
+    display: inline-block;
+    width: auto;
+    height: 230px;
+    margin-right: 50px;
+}
+#director-data{
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    width: 500px;
+}
+footer{
+    position: relative;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-bottom: 30px;
+    background-color: black;
+}
+.logo-companyname{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+footer .container{
+    margin: 30px 30px 0 0;
+    display: inline-block;
+}
+footer h2{
+    margin-top: 0;
+    font-size: 20px;
+    color: white;
+}
+#company-moto{
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 0px;
+    color: white;
+}
+.footer-data{
+    float: right;
+    vertical-align: top;
+    width: 400px;
+    color: white;
+}
+.footer-data .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-data .container p{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+@media (max-width: 910px) {
+    #navbar ul{
+        position: fixed;
+        background-color: black;
+        margin: 0px;
+        padding-inline-start: 0px;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    #navbar ul li{
+        font-weight: bold;
+        display: block;
+        margin-bottom: 15px;
+    }
+    #navbar ul li a:hover, #navbar ul li a:active{
+        background: none;
+        color: blue;
+    }
+    .checkBtn{
+        display: block;
+    }
+    #check:checked ~ul{
+        left: 0;
+    }
+    .footer-data{
+        float: none;
+        display: inline-block;
+    }
+}
+@media (max-width: 500px){
+
+    .carousel{
+        height: 50vh;
+    }
+    .product-carousel, .gallery-carousel{
+        margin: 0px;
+        border-radius: 0;
+        box-shadow: inset 4px 4px #fefdc0;
+    }
+    #products-heading, #gallery-heading{
+        font-size: 20px;
+    }
+    #director-message-heading{
+        font-size: 20px;
+    }
+    #director-message{
+        margin: 0px;
+        border-radius: 0;
+         box-shadow: inset 4px 4px #fefdc0;
+    }
+    .footer-data{
+        width: 300px;
+    }
+}
+@media (max-width: 1130px){
+    #director-data{
+        vertical-align: top;
+        text-align: center;
+        width: 400px;
+    }
+}
+@media (max-width: 1008px){
+    #director-data{
+        text-align: start;
+        width: 300px;
+    }
+    #director-image{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 665px){
+    #director-data{
+        text-align: center;
+        width: 300px;
+    }
+}
+@media (max-width: 880px) {
+    #director-message{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #director-image{
+        margin: 0 0 20px 0
+    }
+    #director-data{
+        text-align: center;
+        width: 300px;
+    }
+    
+}
